@@ -1,0 +1,10 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.conatiner{
+    background-color: #353455;
+    height: 100vh;
+    width: 100vw;
+}

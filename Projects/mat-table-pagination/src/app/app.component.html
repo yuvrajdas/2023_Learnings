@@ -1,0 +1,86 @@
+<!--  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dummyReportDataProviderSource" style="width: 100%;">
+  
+    
+      <ng-container matColumnDef="serial_number">
+        <th mat-header-cell *matHeaderCellDef> SNo. </th>
+        <td mat-cell *matCellDef="let element;"> {{getSearialNumber(element)}}</td>
+      </ng-container>
+  
+    
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+   
+      <ng-container matColumnDef="trips">
+        <th mat-header-cell *matHeaderCellDef> Trips </th>
+        <td mat-cell *matCellDef="let element"> {{element.trips}} </td>
+      </ng-container>
+ 
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef> Country </th>
+        <td mat-cell *matCellDef="let element"> {{element.airline[0].country}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="website">
+        <th mat-header-cell *matHeaderCellDef> Website </th>
+        <td mat-cell *matCellDef="let element"> {{element.airline[0].website}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displyColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displyColumns;"></tr>
+    </table>
+    <div>
+      <mat-paginator
+      #paginator
+      [pageSizeOptions]="[10, 25, 50, 100, 250, 500, 1000]"
+      [pageIndex]="pageIndex"
+      [pageSize]="paginationSize"
+      [length]="totalLengthOfServerSentData"
+      (page)="changePage($event, paginator)"
+      [showFirstLastButtons]="true"
+    ></mat-paginator>
+    </div>
+   
+  </div> -->
+ 
+  <!-- <div>
+    <form [formGroup]="latLangForm" (ngSubmit)="submitQuadinate()">
+      <mat-form-field appearance="outline" >
+        <mat-label>Lat</mat-label>
+        <input matInput  formControlName="lat" >
+       
+      </mat-form-field >
+      <mat-form-field appearance="outline">
+        <mat-label>Lang</mat-label>
+        <input matInput  formControlName="lang">
+      </mat-form-field>
+      <button mat-raised-button >Submit</button>
+    </form>
+
+ 
+  </div>
+ 
+  <div>Lat {{start_end_mark | json}}</div>  
+<div class="col-md-12">
+
+  <div *ngFor="let coordinate of latlng; let i=index">
+    <span> Lat ====> {{coordinate[0]}}</span>
+    <span> Long =====> {{coordinate[1]}}</span>
+  </div>
+  <agm-map [latitude]="latlng[0][0]" [longitude]="latlng[0][1]" [fullscreenControl]='true' [mapTypeControl]='true' [fitBounds]="true">
+    <ng-container  *ngFor="let coordinate of start_end_mark; let i=index; let first =first"
+    >
+    <agm-marker [style.color]="first ? 'green':'red'" [latitude]="coordinate[0]" [longitude]="coordinate[1]" [agmFitBounds]="true"></agm-marker>
+  </ng-container>
+   
+     
+    <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'" #polyline>
+      <agm-polyline-point *ngFor="let coordinate of latlng; let i=index" [latitude]="coordinate[0]" [longitude]="coordinate[0]"></agm-polyline-point>
+    </agm-polyline>
+</agm-map>
+</div> -->
+
+<app-map></app-map>

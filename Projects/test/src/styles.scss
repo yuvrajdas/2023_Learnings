@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+:root{
+    --heading-color: #7DF701;
+    --bg-color:#202123;
+    --text-color:#ffff;
+    --heading-link-font-size:1rem;
+    --heading-link-font-weight:bold;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.dark-theme{
+    a{
+        color: var(--heading-color);
+        font-size: var(--heading-link-font-size);
+        font-weight: var(--heading-link-font-weight);
+    }
+    h1{
+        color: var(--heading-color);
+    }
+
+    background: var(--bg-color);
+}

@@ -1,0 +1,23 @@
+.navbar-toggler {
+    border: none !important;
+}
+.nav-wrapper{
+    padding: 0px 150px;
+}
+ 
+li{
+    
+    width: 65px;
+}
+@media only screen and (max-width: 991px) {
+ 
+    li{
+        text-align: center !important;
+    }
+    .nav-wrapper__actions{
+       width: 100% !important;
+    }
+    .nav-wrapper{
+        padding: 0px;
+    }
+}

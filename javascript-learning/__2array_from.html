@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <!-- 
+        Array.from()
+        used to create a Array from any other object
+    -->
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+<script>
+    // example 1
+    let a  = document.getElementsByTagName('li'); // html collection object
+    Array.from(a) // Array of li [li, li, li, li]
+
+    Array.from(a).forEach((element)=>{
+        console.log(element);
+    }) 
+    
+    console.log("--------------------------------------");
+    // example 2
+    let name = "Yuvraj"
+    let arr =  Array.from(name)
+    console.log(arr);
+</script>
+</body>
+</html>

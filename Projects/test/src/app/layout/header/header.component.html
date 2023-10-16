@@ -1,0 +1,38 @@
+<nav class="navbar fixed-top navbar-expand-lg"[ngClass]="isDarkTheme ? 'dark-theme' : 'light-theme'">
+    <div class="container-fluid nav-wrapper">
+        <div class="d-flex justify-content-between align-items-center nav-wrapper__actions" style="width: 81%;">
+            <a href="#">Heading/Logo</a>
+            <div class="d-flex align-items-center">
+                <div class="me-2 cursor-pointer" (click)="toggleTheme()">
+                    <img src="../../../assets/icons/moon.svg" *ngIf="isDarkTheme"  alt="dark-theme">
+                    <img src="../../../assets/icons/sun.svg"  *ngIf="!isDarkTheme" alt="light-theme">
+                </div>
+                <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                    aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"
+                    (click)="toggleButton()">
+                    <span class="navbar-toggler-icon" *ngIf="!togglerIcon"></span>
+                    <img src="../../../assets/icons/close.svg" alt="" style="height: 30px;" *ngIf="togglerIcon">
+                </div>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#first">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#last">Link 5</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

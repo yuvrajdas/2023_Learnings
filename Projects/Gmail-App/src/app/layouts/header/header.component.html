@@ -1,0 +1,19 @@
+<header>
+    <mat-toolbar color="#F6F8FC">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <!-- <span class="gmail_logo"><img src="/assets/images/gmail_logo.png" alt=""></span> -->       
+        <form class="example-form" style="height: 50px !important;">
+            <mat-form-field appearance="outline" class="searchInputs" >
+                <mat-icon>search</mat-icon>
+                <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto" placeholder="" >
+                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option.name}}
+                </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+    </mat-toolbar>
+</header>

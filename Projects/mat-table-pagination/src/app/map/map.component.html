@@ -1,0 +1,32 @@
+ 
+  <div style="margin:50px 0px 20px 50px; ">
+    <form [formGroup]="latLangForm" (ngSubmit)="submitQuadinate()">
+      <mat-form-field appearance="outline">
+        
+        <input matInput  formControlName="coordinates" placeholder="Enter Coordinates"  style="width: 100% !important;">
+      </mat-form-field >
+    <button style="height: 60px; width: 100px; margin-left: 10px; position: relative; top: -4px;" mat-raised-button >Submit</button>
+    </form>
+  </div>
+ 
+  <!-- <div>Lat {{start_end_mark | json}}</div>   -->
+ 
+<!-- 
+  <div *ngFor="let coordinate of latlng; let i=index">
+    <span> Lat ====> {{coordinate[0]}}</span>
+    <span> Long =====> {{coordinate[1]}}</span>
+  </div> -->
+  <div style="margin-left: 50px !important;">
+  <agm-map  [zoom]="10"  [mapTypeId]="'satellite'"   [latitude]="latlng[0][0]"  [longitude]="latlng[0][1]" [fullscreenControl]='true' [mapTypeControl]='true' [fitBounds]="true"
+  [mapTypeControl]="true">
+    <agm-marker *ngFor="let coordinate of start_end_mark; let i=index" [latitude]="coordinate[0]" [longitude]="coordinate[1]" [agmFitBounds]="true"></agm-marker>
+    
+    <div #polylineParent >
+      <agm-polyline  [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'" id="elementToRemove">
+        <agm-polyline-point *ngFor="let coordinate of latlng; let i=index" [latitude]="coordinate[0]" [longitude]="coordinate[1]"></agm-polyline-point>
+      </agm-polyline>
+    </div>
+  
+  </agm-map>
+</div>
+ 

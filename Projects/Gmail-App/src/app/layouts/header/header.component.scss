@@ -1,0 +1,47 @@
+header {
+    .gmail_logo {
+        margin-top: 8px;
+        margin-left: 18px;
+    }
+
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 0 0 10px 0 !important
+        
+    }
+
+    ::ng-deep .mat-form-field-infix {
+        padding: 0.5em 0;
+        border-top: 0.84375em solid transparent; 
+    }
+
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+        border-radius: 0 5px 5px 0;
+        border-left-style: none;
+        flex-grow: 1;
+    }
+
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start, .mat-form-field-appearance-outline .mat-form-field-outline-end {
+        border:none;
+        min-width: 5px;
+    }
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+        border:none;
+        min-width: 5px;
+    }
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-top {
+        border:none;
+        min-width: 5px;
+    }
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-bottom {
+        border:none;
+        min-width: 5px;
+    }
+
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+        /* color: rgba(0,0,0,.12); */
+        border: 1px solid red;
+        border-radius: 135px;
+        background-color: #EAF1FB;
+    }
+}
+
