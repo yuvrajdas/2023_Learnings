@@ -30,7 +30,7 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     MatButtonModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCduIk6PEFC8GEhQqollUAOHXAZ8q7yJZo',
+      apiKey: '',
       libraries: ['places', 'drawing', 'geometry'],
 })
   ],
