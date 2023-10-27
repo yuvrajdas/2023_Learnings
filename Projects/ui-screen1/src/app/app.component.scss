@@ -1,0 +1,5 @@
+@import '../assets/variables';
+main{
+    height: calc(100vh - $header-height);
+    width: 100vw;
+}

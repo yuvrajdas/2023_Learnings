@@ -1,0 +1,28 @@
+%forAll{
+    color: rgb(78, 78, 45);
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.A{
+    background-color: rgb(74, 142, 187);
+    @extend %forAll;
+}
+
+.B{
+    background-color: rgb(212, 0, 231);
+    @extend %forAll;
+}
+
+.C{
+    background-color: rgb(243, 23, 42);
+    @extend %forAll;
+}
+
+.D{
+    background-color: rgb(170, 77, 41);
+    @extend %forAll;
+}
+
